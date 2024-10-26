@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Expiration Calculator</title>
+    <script src="script.js">
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <style>body {
+        background-image: url('cloudy.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }</style>
+</head>
+<div style="background-color: white;" class="box" align="center">
+    <body>
+        <h1 align="center">Medical Expiration Calculator</h1>
+        <h2 align="center">Are you 40 years old or older?</h2>
+        <div id="qualiifyingQuestion" align="center">
+            <button id="aboveBtn" onclick="aboveAction(); this.classList.toggle('clicked')">Yes</button><button id="belowBtn" onclick="belowAction(); this.classList.toggle('clicked')">No</button>
+        </div>
+        <h2 align="center">What class of medical do you have?</h2>
+        <div id="medicalBtns" align="center">
+            <button id="medclass1" onclick="firstclassAction(); this.classList.toggle('clicked')">1st</button><button id="medclass2" onclick="secondclassAction(); this.classList.toggle('clicked')">2nd</button><button id="medclass3" onclick="thirdclassAction(); this.classList.toggle('clicked')">3rd</button>
+        </div>
+        <h2 align="center">Date Medical Received</h2>
+        <div id="month" align="center">
+            <label for="monthInput">Enter the month you received your medical in number format</label><br>
+            <input type="number" id="monthInput" placeholder="Enter Month (mm)" maxlength="2">
+        <div id="year" align="center">
+            <label for="yearInput">Enter the year you received your medical in number format</label><br>
+            <input type="number" id="yearInput" placeholder="Enter Year(yyyy)" maxlength="4"><br><br>
+            <button id="dateCalculate" onclick="calculateDate(); this.classList.toggle('clicked')">Calculate!</button>
+        </div>
+        <div>
+            <p id="valueBox" class="text-light">Waiting for input...</p>
+        </div>
+    </body>
+</div>
+</html>
